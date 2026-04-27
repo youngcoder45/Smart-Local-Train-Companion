@@ -63,6 +63,39 @@
   color: #999;
 }
 
+.swap-btn {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.swap-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.swap-btn:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
 .submit-btn {
   padding: 14px 24px;
   font-size: 16px;
