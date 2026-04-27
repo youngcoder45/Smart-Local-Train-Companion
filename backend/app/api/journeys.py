@@ -131,6 +131,7 @@ def _mock_journey_options(source: str, destination: str) -> list[JourneyOption]:
                 mode="WALK",
                 from_station=f"{source}-JUNCTION",
                 to_station=f"{source}-JUNCTION (platform change)",
+                line=None,
                 duration_minutes=5,
             ),
             JourneyLeg(
