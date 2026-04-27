@@ -1,0 +1,82 @@
+name: "Feature request"
+description: "Suggest an idea or enhancement"
+title: "[Feature]: "
+labels:
+  - "enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose an improvement.
+
+        Please fill out the sections below with enough detail to help us understand the problem and evaluate the solution.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: What problem are you trying to solve? Why is this needed?
+      placeholder: "I get frustrated when..., because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen? Include UX/API details if relevant.
+      placeholder: "Add/Change..., so that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider?
+      placeholder: "Alternative A..., Alternative B..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope / Affected areas
+      description: Which parts of the project would this touch?
+      placeholder: |
+        - Frontend:
+        - Backend:
+        - Docs:
+        - CI/Infra:
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: What does "done" look like? List concrete outcomes.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Links, screenshots, mockups, prior art, related issues/PRs.
+      placeholder: "Link to related issue(s), designs, screenshots..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues to avoid duplicates.
+          required: true
+        - label: I can help implement this feature (optional).
+          required: false
