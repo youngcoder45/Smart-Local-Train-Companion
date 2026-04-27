@@ -1,0 +1,77 @@
+name: "Documentation"
+description: "Report missing/incorrect docs or propose documentation improvements"
+title: "docs: <short summary>"
+labels:
+  - documentation
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the documentation!
+
+        Tip: If this is a security-related documentation concern, please follow the process in `SECURITY.md`.
+
+  - type: dropdown
+    id: doc_area
+    attributes:
+      label: Area
+      description: What part of the docs does this relate to?
+      multiple: true
+      options:
+        - README
+        - Backend docs
+        - Frontend docs
+        - API docs
+        - Setup / Installation
+        - Contributing
+        - Security
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location (link or path)
+      description: Provide a URL and/or repo path to the page/section needing updates.
+      placeholder: "e.g. README.md#installation or https://github.com/<org>/<repo>/wiki/..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing?
+      description: Describe the documentation issue and what you expected to find.
+      placeholder: "The setup instructions mention X, but the actual command is Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Provide suggested wording, structure, or examples you want added.
+      placeholder: "Suggested text:\n\n..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add screenshots, logs, references, or related issues/PRs.
+      placeholder: "Related: #123"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: "I searched existing issues to avoid duplicates."
+          required: true
+        - label: "I can help by opening a PR to implement this documentation change."
+          required: false
